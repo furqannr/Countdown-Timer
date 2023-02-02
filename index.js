@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 let timeInSeconds = -1;
@@ -26,7 +27,7 @@ async function askUser() {
 }
 async function continueChoice() {
     do {
-        askUser();
+        await askUser();
         var choice = await inquirer.prompt({
             type: "input",
             name: "qa",
